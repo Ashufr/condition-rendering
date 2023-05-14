@@ -7,8 +7,8 @@ function Form(props) {
     <form className="form">
       <Input type="text" placeholder="Username" />
       <Input type="password" placeholder="Password" />
-      <Input type="password" placeholder="Confirm Password" />
-      <Submit />
+      {!props.status  && <Input type="password" placeholder="Confirm Password" /> }
+      <Submit status= {props.status}/>
     </form>
   );
 }
